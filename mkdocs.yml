@@ -1,0 +1,41 @@
+site_name: Thermal dashboard
+
+nav:
+  - Home: index.md
+  - Code Reference: 
+    - Dash Components:
+      - reference/components/dropdown.md
+      - reference/components/sidebar.md
+    - Pages:
+      - reference/pages/home_page.md
+      - reference/pages/longterm_page.md
+      - reference/pages/shortterm_page.md
+      - reference/pages/validation_page.md
+    - Utility functions:
+        - reference/utils/common_functions.md
+        - reference/utils/loader.md
+        - reference/utils/loss_functions.md
+    - reference/app.md
+
+theme:  
+  name: material
+  palette:
+    primary: cy
+    accent: purple
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+plugins:
+  - search
+  - mkdocstrings:
+      enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+      default_handler: python
+      handlers:
+        python: 
+          paths: [src]
+          options:
+            show_source: false
+
+extra_css:
+    - styles.css

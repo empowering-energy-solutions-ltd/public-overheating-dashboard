@@ -1,0 +1,1 @@
+::: pages.shortterm_page

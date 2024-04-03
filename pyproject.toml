@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "dash-app-thermal-analysis"
+version = "0.1.0"
+description = ""
+authors = ["alexandre-canet-E2S <121625353+alexandre-canet-E2S@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "dash_app_thermal_analysis"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+dash = "^2.13.0"
+pandas = "^2.1.1"
+icecream = "^2.1.3"
+python-dotenv = "^1.0.0"
+dash-bootstrap-components = "^1.5.0"
+e2sviz = {git = "git@github.com:empowering-energy-solutions-ltd/e2sviz.git"}
+dash-ag-grid = "^2.3.0"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+dash-auth = "^2.0.0"
+mkdocs-gen-files = "^0.5.0"
+mkdocs = "^1.5.3"
+mkdocstrings = "^0.24.1"
+mkdocs-material = "^9.5.14"
+mkdocs-mermaid2-plugin = "^1.1.1"
+mkdocs-markdownextradata-plugin = "^0.2.5"
+mkdocs-literate-nav = "^0.6.1"
+mkdocs-section-index = "^0.3.8"
+mkdocstrings-python = "^1.9.0"
+
+[tool.poetry.group.dev.dependencies]
+yapf = "^0.40.2"
+pytest = "^7.4.2"
+pylint = "^2.17.6"
+ipykernel = "^6.25.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
